@@ -8,6 +8,7 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoTaskCreatorComponent } from './components/todo-task-creator/todo-task-creator.component';
 import { FilterPipe } from './filter.pipe';
+import { TodoTaskFilterComponent } from './components/todo-task-filter/todo-task-filter.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilterPipe } from './filter.pipe';
     TodoItemComponent,
     TodoListComponent,
     TodoTaskCreatorComponent,
-    FilterPipe
+    FilterPipe,
+    TodoTaskFilterComponent
   ],
   imports: [
     BrowserModule,

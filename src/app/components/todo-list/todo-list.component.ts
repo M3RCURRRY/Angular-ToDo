@@ -10,6 +10,7 @@ import { ITask, Priority } from 'src/app/TodoTypes';
 export class TodoListComponent implements OnInit {
 
   tasks: ITask[] = [];
+  filter!: string;
 
   constructor(private taskService: TaskService) { }
 
@@ -26,5 +27,9 @@ export class TodoListComponent implements OnInit {
     }
 
     this.taskService.addTask(newTask);
+  }
+
+  setFilter(value: string) {
+    this.filter = value;
   }
 }

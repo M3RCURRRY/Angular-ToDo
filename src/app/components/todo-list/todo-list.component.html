@@ -1,4 +1,5 @@
 <div class="todo-list">
   <app-todo-task-creator (addTaskHandler)="addTask($event)"></app-todo-task-creator>
-  <app-todo-item *ngFor="let t of tasks" [taskData]="t"></app-todo-item>
+  <app-todo-item *ngFor="let t of tasks | itemfilter:filter" [taskData]="t"></app-todo-item>
+  <app-todo-task-filter (filterEmitter)="setFilter($event)"></app-todo-task-filter>
 </div>
