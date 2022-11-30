@@ -5,7 +5,7 @@ export enum Priority {
 }
 
 export interface ITask {
-  id: number;
+  id?: number;
   priority: Priority; // Same as status
   text: string;
   daysLeft: number;

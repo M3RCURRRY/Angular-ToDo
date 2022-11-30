@@ -1,0 +1,16 @@
+<div class="task-creator-layout">
+  <label>Task text
+    <input type="text" name="text" [(ngModel)]="text">
+  </label>
+  <label>Days left
+    <input type="number" name="days" [(ngModel)]="days">
+  </label>
+  <label>
+    Choose priority
+    <select name="priority" [(ngModel)]="priority">
+      <option disabled selected>Select priority</option>
+      <option *ngFor="let pr of options" [value]="pr">{{ pr }}</option>
+    </select>
+  </label>
+  <button (click)="onTaskSubmit(text, days, priority)">Submit task</button>
+</div>
