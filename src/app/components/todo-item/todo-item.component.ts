@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ITask } from 'src/app/TodoTypes';
+import { ITask } from 'src/app/todo-types';
 
 @Component({
   selector: 'app-todo-item',
