@@ -1,0 +1,9 @@
+.task-filter-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-filter-layout > * {
+  margin-bottom: 5px;
+}

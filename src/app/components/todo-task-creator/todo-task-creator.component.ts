@@ -13,7 +13,7 @@ export class TodoTaskCreatorComponent {
 
   options:string[] = Object.values(Priority);
 
-  @Output() addTaskHandler = new EventEmitter();
+  @Output() addTaskEmmiter = new EventEmitter();
 
   onTaskSubmit(text: string, days: number, priority: Priority) {
 
@@ -25,6 +25,6 @@ export class TodoTaskCreatorComponent {
       priority: this.priority
     }
 
-    this.addTaskHandler.emit(obj);
+    this.addTaskEmmiter.emit(obj);
   }
 }

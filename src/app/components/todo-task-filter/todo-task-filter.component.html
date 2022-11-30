@@ -1,4 +1,5 @@
-<div>
-  <input type="text" name="filter" [(ngModel)]="filter">
+<div class="task-filter-layout">
+  <h3><b>Filter your tasks</b></h3>
+  <input type="text" name="filter" [(ngModel)]="filter" placeholder="Type keywords here">
   <button (click)="filterHandler()">Search</button>
 </div>
