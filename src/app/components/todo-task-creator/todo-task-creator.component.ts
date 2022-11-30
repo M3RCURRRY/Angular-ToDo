@@ -25,8 +25,6 @@ export class TodoTaskCreatorComponent {
       priority: this.priority
     }
 
-    console.log(obj);
-
     this.addTaskHandler.emit(obj);
   }
 }
