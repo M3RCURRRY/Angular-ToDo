@@ -1,9 +1,19 @@
-.todoList {
-  width: 300px;
+.todo-list {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 500px;
   height: fit-content;
+  padding: 10px;
   margin: 0 auto;
   
   border-radius: 8px;
   border: 1px solid black;
   box-sizing: border-box;
+
+  -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
 }

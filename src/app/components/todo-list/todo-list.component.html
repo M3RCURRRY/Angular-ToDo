@@ -1,3 +1,4 @@
-<div class="todoList">
-
+<div class="todo-list">
+  <app-todo-task-creator></app-todo-task-creator>
+  <app-todo-item *ngFor="let t of tasks" [taskData]="t"></app-todo-item>
 </div>

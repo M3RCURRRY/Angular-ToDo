@@ -1,6 +1,12 @@
+export enum Priority {
+  HIGH = "High",
+  MEDIUM = "Medium",
+  LOW = "Low"
+}
+
 export interface ITask {
   id: number;
-  priority: number; // Same as status
+  priority: Priority; // Same as status
   text: string;
   daysLeft: number;
 }

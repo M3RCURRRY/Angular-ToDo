@@ -1,6 +1,10 @@
 .todo-item {
   max-width: 100%;
-  background-color: #4f4f4f;
+  background-color: #e1e1e1;
+  border-radius: 8px;
+
+  padding: 5px 20px;
+  margin: 8px 5px;
 }
 
 .todo-item > h3 {
@@ -8,3 +12,18 @@
   justify-content: space-between;
 }
 
+.priority-high, .priority-medium, .priority-low {
+  font-weight: 500;
+}
+
+.priority-high {
+  color: red;
+}
+
+.priority-medium {
+  color: orange;
+}
+
+.priority-low {
+  color: limegreen;
+}

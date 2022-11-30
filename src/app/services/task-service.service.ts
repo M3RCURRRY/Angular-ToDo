@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { TASKS } from '../mock-data';
-import { ITask } from '../TodoTypes';
+import { ITask, Priority } from '../TodoTypes';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,7 @@ export class TaskService {
     this.tasks = this.tasks.filter(t => t.id !== id);
   }
 
-  changeStatus(id: number, priority: number) {
+  changeStatus(id: number, priority: Priority) {
     for(let task of this.tasks) {
       if (task.id === id) {
         task.priority = priority;

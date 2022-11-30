@@ -1,4 +1,9 @@
 <div class="todo-item">
   <h3>{{ taskData.text }}</h3>
-  <p>{{ taskData.daysLeft }}</p>
+  <p>Days left: <b>{{ taskData.daysLeft }}</b></p>
+  <p [ngClass]="{
+    'priority-high': taskData.priority == 'High',
+    'priority-medium': taskData.priority == 'Medium',
+    'priority-low': taskData.priority == 'Low'
+  }">Priority: {{ taskData.priority }}</p>
 </div>
