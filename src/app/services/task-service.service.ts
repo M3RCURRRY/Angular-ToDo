@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 
 import { TASKS } from '../mock-data';
-import { ITask } from '../todo-types';
+import { ITask } from '../TodoTypes';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TaskServiceService {
+export class TaskService {
 
   constructor() { }
-
+  
   tasks: ITask[] = TASKS;
   
   getTasks(): ITask[] {

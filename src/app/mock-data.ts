@@ -1,4 +1,4 @@
-import { ITask } from "./todo-types";
+import { ITask } from "./TodoTypes";
 
 export const TASKS: ITask[] = [
   {
