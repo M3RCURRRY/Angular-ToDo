@@ -22,6 +22,7 @@ export class TaskService {
 
   removeTask(id: number) {
     this.tasks = this.tasks.filter(t => t.id !== id);
+    return this.tasks;
   }
 
   changeStatus(id: number, priority: Priority) {

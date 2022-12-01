@@ -9,6 +9,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoTaskCreatorComponent } from './components/todo-task-creator/todo-task-creator.component';
 import { FilterPipe } from './filter.pipe';
 import { TodoTaskFilterComponent } from './components/todo-task-filter/todo-task-filter.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TodoTaskFilterComponent } from './components/todo-task-filter/todo-task
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

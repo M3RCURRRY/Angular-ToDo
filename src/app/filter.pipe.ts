@@ -7,9 +7,9 @@ import { ITask } from './TodoTypes';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(data: ITask[], filter: string): any {
+  transform(data: ITask[], filter: string): ITask[] {
     if (!data || !filter) return data;
     
-    return data.filter(item => item.text.indexOf(filter) !== -1);
+    return data.filter(item => item.text.toLowerCase().indexOf(filter.toLowerCase()) !== -1);
   }
 }

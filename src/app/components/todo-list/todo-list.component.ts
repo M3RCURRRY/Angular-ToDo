@@ -20,7 +20,7 @@ export class TodoListComponent implements OnInit {
 
   addTask(obj: ITask) {
     const newTask: ITask = {
-      id: this.tasks.at(-1)?.id,
+      id: this.tasks.at(-1)?.id as number + 1,
       priority: obj.priority,
       text: obj.text,
       daysLeft: obj.daysLeft
@@ -31,5 +31,9 @@ export class TodoListComponent implements OnInit {
 
   setFilter(value: string) {
     this.filter = value;
+  }
+
+  deleteTask(id: number) {
+    this.tasks = this.taskService.removeTask(id);
   }
 }

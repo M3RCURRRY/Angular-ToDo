@@ -1,5 +1,5 @@
 <div class="todo-item">
-  <h3>{{ taskData.text }}</h3>
+  <h3>{{ taskData.text }} <fa-icon [icon]="faIcon" (click)="onDelete()"></fa-icon></h3>
   <p>Days left: <b>{{ taskData.daysLeft }}</b></p>
   <p [ngClass]="{
     'priority-high': taskData.priority == 'High',
