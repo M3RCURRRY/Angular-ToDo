@@ -1,0 +1,11 @@
+<div class="auth-container">
+  <label>
+    Username
+    <input type="email" required [(ngModel)]="username">
+  </label>
+  <label>
+    Password
+    <input type="password" required [(ngModel)]="password">
+  </label>
+  <button (click)="onLogin(username, password)">Auth me!</button>
+</div>
