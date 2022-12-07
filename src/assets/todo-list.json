@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "priority": "High",
+    "text": "Find a job",
+    "daysLeft": 20
+  },
+  {
+    "id": 1,
+    "priority": "Low",
+    "text": "Do cleaning",
+    "daysLeft": 2
+  },
+  {
+    "id": 2,
+    "priority": "Medium",
+    "text": "Deliver the food",
+    "daysLeft": 1
+  }
+]
