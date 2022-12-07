@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from 'src/app/services/task-service.service';
 import { ITask, Priority } from 'src/app/TodoTypes';
@@ -12,10 +13,12 @@ export class TodoListComponent implements OnInit {
   tasks: ITask[] = [];
   filter!: string;
 
-  constructor(private taskService: TaskService) { }
+  constructor(private taskService: TaskService, private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.tasks = this.taskService.getTasks();
+    this.taskService.getTasks().subscribe(data => {
+      this.tasks = data as ITask[];
+    });
   }
 
   addTask(obj: ITask) {

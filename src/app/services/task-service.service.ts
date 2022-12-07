@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { TASKS } from '../mock-data';
 import { ITask, Priority } from '../TodoTypes';
@@ -8,12 +10,12 @@ import { ITask, Priority } from '../TodoTypes';
 })
 export class TaskService {
 
-  constructor() { }
+  tasks: ITask[] = [];
+
+  constructor(private http: HttpClient) {  }
   
-  tasks: ITask[] = TASKS;
-  
-  getTasks(): ITask[] {
-    return this.tasks;
+  getTasks(): Observable<Object> {
+    return this.http.get('assets/todo-list.json');
   }
 
   addTask(task: ITask) {
